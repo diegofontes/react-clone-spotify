@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Play } from '../../styles/Icons';
 
 export const Container = styled.div`
         position: relative;
@@ -9,6 +10,12 @@ export const Container = styled.div`
         flex-direction: column;
         /* align-items: center  */
         justify-content: flex-end;
+
+        &:hover{
+                > .playButton{
+                        display: flex;
+                }
+        }
 
 `;
 
@@ -29,11 +36,19 @@ export const Info = styled.div`
         justify-content: space-around;
 
         > span {
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 24px;
-            letter-spacing: normal;
-            text-transform: none;  
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: normal;
+                text-transform: none;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                max-width: 110px;
+                pointer-events: none;
+
         }
 
         > span:nth-child(2) {
@@ -44,5 +59,29 @@ export const Info = styled.div`
             text-transform: none;
             color: var(--gray);
         }
+
+`;
+
+export const PlayButton = styled.div`
+        
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+
+        background: var(--green);
+        
+        position: absolute;
+        right: 14px;
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+`;
+
+export const PlayIcon = styled(Play)`
+        width: 24px;
+        height: 24px;
+        padding: 0 0 0 2px;
 
 `;

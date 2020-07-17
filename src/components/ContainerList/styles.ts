@@ -2,13 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
         display: grid;
-        max-height: 350px; 
+        margin-top: 14px;
+
+
+
+        padding-bottom: 16px;
+        max-height: 370px; 
         gap: 1rem;
         grid-template-areas:
         'HL HL HL HL HL'
         'LW LW LW LW LW';
         grid-template-columns: 18.5% 18.5% 18.5% 18.5% 18.5% ;
         grid-template-rows: 33px auto;
+
 `;
 
 export const Header = styled.div`

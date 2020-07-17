@@ -7,14 +7,21 @@ import {
 
 
 export const Container = styled.div`
+
+        z-index: 2;
+        position: sticky; /* Elemento fixado na tela */
+        top: 0;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         height: 60px;
         width: auto;
+        padding: 15px 31px;
 
-        margin: 0 31px;
+        background: var(--black);
+        
 `;
 
 export const Paginacao = styled.div`

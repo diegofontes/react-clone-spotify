@@ -1,15 +1,24 @@
 import React from 'react';
 
-import { Container, Avatar, Info } from './styles';
+import { Container, Avatar, Info, PlayButton, PlayIcon } from './styles';
 
-const Widget: React.FC = () => {
+interface Props {
+    name: string;
+}
+
+
+const Widget: React.FC<Props> = ({name}) => {
   return (
       <Container>
           <Avatar/>
             <Info>
-              <span> Tribalistas </span>
+              <span>{name}</span>
               <span> Artista </span>
             </Info>
+          
+          <PlayButton className="playButton"  >
+            <PlayIcon/>
+          </PlayButton>
       </Container>
   );
 }
